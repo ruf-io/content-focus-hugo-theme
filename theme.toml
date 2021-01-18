@@ -1,21 +1,15 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Focus On Building"
+name = "Content Focus"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = "https://github.com/ruf-io/content-focus-hugo-theme/blob/master/LICENSE"
+description = "A basic hugo theme that tries to fade UI to the background and focus on the WRITING and CONTENT instead."
+homepage = "http://andyhattemer.com/content-focus-hugo-theme"
 tags = []
 features = []
 min_version = "0.41.0"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Andy Hattemer"
+  homepage = "https://andyhattemer.com"
