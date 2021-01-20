@@ -1,0 +1,15 @@
+{{ define "main" }}
+    <div class="index md">
+
+        <img src="https://cdn.andyhattemer.com/header.jpg" alt="Andy Hattemer" />
+        
+        <h1 class="site-title">
+            {{ .Site.Title }}
+        </h1>
+    
+        {{ .Content }}
+
+        {{ partial "postList.html" . }}
+        
+    </div>
+{{ end }}
