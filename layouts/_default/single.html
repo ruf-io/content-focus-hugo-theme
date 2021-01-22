@@ -3,9 +3,7 @@
 
   <article class="post">
 
-    <header class="post-header">
-      <h1 class="post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}}">{{ trim .Title  " " }}</h1>
-    </header>
+    <h1 class="post-title{{ if .Params.favorite }} favorite{{end}}{{ if .Params.draft }} draft{{end}}">{{ trim .Title  " " }}</h1>
 
     {{ if .Params.cover_image }}
       <p class="context">{{ .Params.description | markdownify }}</p>
@@ -29,6 +27,11 @@
     <div class="content">
       {{ .Content }}
     </div>
+    {{ if and (gt .WordCount 400 ) (.Params.toc) }}
+    <aside>
+        {{.TableOfContents}}
+    </aside>
+    {{ end }}
   </article>
 
 {{ end }}
