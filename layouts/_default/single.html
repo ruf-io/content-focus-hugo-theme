@@ -10,7 +10,8 @@
     {{ end }}
     
     {{ if .Params.cover_image }}
-      <img src="{{ .Params.cover_image }}" />
+      {{- $img := .Resources.GetMatch .Params.cover_image -}}
+      <img src="{{ $img.RelPermalink }}" height="{{ $img.Height }}" width="{{ $img.Width }}" />
     {{ end }}
     <p class="attribution">
       {{ if .Params.cover_image_attribution_url }}
