@@ -1,6 +1,8 @@
 <h2 id="posts">Posts</h2>
 <ul class="big nobullets">
     {{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
-        {{ partial "postSummary.html" . }}
+        {{- if not .Params.noindex -}}
+            {{ partial "postSummary.html" . }}
+        {{- end -}}
     {{ end }}
 </ul>
