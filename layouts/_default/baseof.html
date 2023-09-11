@@ -25,6 +25,10 @@
         <meta property="twitter:image" content="{{ .Site.BaseURL }}/meta.jpg">
         
         <link rel="canonical" href="{{ .Permalink }}" />
+
+        {{- if .Params.noindex -}}
+          <meta name = "robots" content = "noindex">
+        {{- end -}}
         
         <style type="text/css">
             html {
